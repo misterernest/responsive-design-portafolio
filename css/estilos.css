@@ -73,6 +73,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .hero-image {
@@ -110,6 +111,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .project-course,
 .project-date,
@@ -147,6 +149,7 @@ h2 {
   height: 70px;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 ol,
@@ -159,10 +162,7 @@ ul {
 figure {
   margin: 0;
 }
-figure.logo span {
-  font-family: "Fjalla One", sans-serif;
-  font-size: 2rem;
-}
+
 
 .header a {
   color: white;
@@ -207,6 +207,7 @@ figure.logo span {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer img {
@@ -264,6 +265,7 @@ figure.logo span {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .social {
@@ -318,7 +320,10 @@ figure.logo span {
 
 .container {
   /* border: 1px solid red; */
-  width: 1000px;
+  max-width: 1000px;
+  /* width: 100%; */
+  /* padding: 20px; */
+  flex: 1;
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
