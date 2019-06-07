@@ -135,18 +135,22 @@ h2 {
 }
 
 .project-details {
-  width: 500px;
+  width: 50%;
 }
 
 .project-imageContainer {
-  width: 500px;
+  width: 50%;
+}
+
+.project-imageContainer img {
+  max-width: 100%;
 }
 
 .header {
   background-color: #1b2127;
   color: white;
   display: flex;
-  height: 70px;
+  height: 90px;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -321,7 +325,7 @@ figure {
 .container {
   /* border: 1px solid red; */
   max-width: 1000px;
-  /* width: 100%; */
+  /* width: 100% ; */
   /* padding: 20px; */
   flex: 1;
   margin: 0 auto;
@@ -330,4 +334,72 @@ figure {
   align-items: inherit;
   height: inherit;
   flex-wrap: inherit;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 767px) {
+  .header {
+    display: block;
+    height: auto;
+  }
+  .header ol {
+    display: initial;
+  }
+
+  .header ol li {
+    height: 50px;
+    text-align: center;
+  }
+  .header a {
+    justify-content: center;
+  }
+  .header .logo {
+    text-align: center;
+  }
+
+  .project {
+    display: block;
+  }
+  .project-imageContainer {
+    width: auto;
+    text-align: center;
+  }
+  .project-details {
+    width: auto;
+    font-size: 16px;
+  }
+  .project-course, .project-date, .project-url {
+    margin: 0.3em 0;
+  }
+  .project-title {
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+  }
+  .project-url {
+    font-size: 0.8em;
+  }
+
+  .project-course {
+    font-size: .7em;
+  }
+
+  .project-date {
+    font-size: 1em;
+  }
+
+  .project-description {
+    font-size: 1em;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .project-details {
+    width: auto;
+    font-size: 12px;
+  }
 }
