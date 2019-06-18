@@ -25,6 +25,55 @@ valores */
 /* background gris = #1b2127 */
 /* celeste = #026fff */
 
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?j4b167');
+  src:  url('../fonts/icomoon.eot?j4b167#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?j4b167') format('truetype'),
+    url('../fonts/icomoon.woff?j4b167') format('woff'),
+    url('../fonts/icomoon.svg?j4b167#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram:before {
+  content: "\e901";
+}
+.icon-github:before {
+  content: "\e902";
+}
+
+.icon-twitter:before {
+  content: "\e903";
+}
+
+.icon-facebook:before {
+  content: "\e904";
+}
+.container .social [class^="icon-"], .container .social [class*=" icon-"] {
+  font-size: 2.5rem;
+  padding-left: 0.5rem;
+}
+.icon-menu:before {
+  content: "\e900";
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;
@@ -353,6 +402,21 @@ figure {
   height: 100%;
 }
 
+.burger-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: none;
+  position: fixed;
+  z-index: 4;
+  top: 5px;
+  left: 5px;
+}
+
 @media screen and (max-width: 1024px) {
   .hero {
     height: auto;
@@ -379,6 +443,9 @@ figure {
 }
 
 @media screen and (max-width: 767px) {
+  .burger-button {
+    display: block;
+  }
   .header {
     display: block;
     height: auto;
@@ -393,11 +460,33 @@ figure {
   }
   .header a {
     justify-content: center;
+    height: 40px;
+    font-size: 2em;
+    text-decoration: underline;
+    margin-bottom: 0.5em;
   }
   .header .logo {
     text-align: center;
   }
-
+  .menu {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    bottom: 0;
+    background-color: #056fffe6;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+  
+  .menu.is-active {
+    left: 0;
+    transition: 0.3s;
+  }
   .project {
     display: block;
   }

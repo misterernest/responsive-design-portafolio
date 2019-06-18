@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
+    <i class="icon-menu burger-button" id="burguer-menu"></i>
     <header class="header">
       <div class="container">
         <figure class="logo">
@@ -219,22 +220,10 @@
           <button>Enviar</button>
         </form>
         <div class="social">
-          <a
-            href="https://twitter.com/leonidasesteban"
-            class="social-link twitter"
-          ></a>
-          <a
-            href="https://facebook.com/leonidas.esteban"
-            class="social-link facebook"
-          ></a>
-          <a
-            href="https://github.com/leonidasesteban"
-            class="social-link github"
-          ></a>
-          <a
-            href="https://instagram.com/leonidasesteban"
-            class="social-link instagram"
-          ></a>
+          <i class="icon-twitter"></i>
+          <i class="icon-facebook"></i>
+          <i class="icon-github"></i>
+          <i class="icon-instagram"></i>
         </div>
       </div>
     </section>
@@ -254,5 +243,28 @@
         </div>
       </div>
     </footer>
+    <script>
+            
+      const menu = document.querySelector('.menu');
+      const burgerButton = document.querySelector('#burguer-menu');
+      const ipad = window.matchMedia('screen and (max-width: 767px)')
+      
+      ipad.addListener(validation)
+      function validation(event) {
+      console.log(ipad.matches);
+        if (event.matches) {
+          burgerButton.addEventListener('click', hideShow)
+        } else {
+          burgerButton.removeEventListener('click', hideShow)
+        }
+      }
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active')
+        } else {
+          menu.classList.add('is-active')
+        }
+      }
+    </script>
   </body>
 </html>
