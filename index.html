@@ -248,10 +248,9 @@
       const burgerButton = document.querySelector("#burguer-menu");
       const ipad = window.matchMedia("screen and (max-width: 767px)");
       const widthClientInitial = document.documentElement.clientWidth;
-      if (widthClientInitial <= 767) {
-        burgerButton.addEventListener("click", hideShow);
-      }
+
       ipad.addListener(validation);
+      validation(ipad);
       function validation(event) {
         if (event.matches) {
           burgerButton.addEventListener("click", hideShow);
