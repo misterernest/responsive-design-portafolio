@@ -68,7 +68,7 @@ valores */
 }
 .container .social [class^="icon-"], .container .social [class*=" icon-"] {
   font-size: 2.5rem;
-  padding-left: 0.5rem;
+  padding: 0.5rem;
 }
 .icon-menu:before {
   content: "\e900";
@@ -436,6 +436,9 @@ figure {
     font-size: 2em;
     z-index: 2;
   }
+  .event-list-title {
+    margin-left: 0;
+  }
   .container {
     padding: 0 1em;
     position: relative;
@@ -535,13 +538,24 @@ figure {
   h1 {
     font-size: 1.5em;
   }
+  h2 {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 1.5em 0;
+  }
   .project-details {
     width: auto;
-    font-size: 12px;
+    font-size: 14px;
   }
   .event-detail {
     margin: -2em 0.5em 0.5em;
     padding: 1em;
+  }
+  .portfolio {
+    padding: 20px 10px;
+  }
+  .container {
+    padding: 0;
   }
   .contact {
     height: auto;
