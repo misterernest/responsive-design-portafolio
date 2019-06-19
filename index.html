@@ -244,25 +244,26 @@
       </div>
     </footer>
     <script>
-            
-      const menu = document.querySelector('.menu');
-      const burgerButton = document.querySelector('#burguer-menu');
-      const ipad = window.matchMedia('screen and (max-width: 767px)')
-      
-      ipad.addListener(validation)
+      const menu = document.querySelector(".menu");
+      const burgerButton = document.querySelector("#burguer-menu");
+      const ipad = window.matchMedia("screen and (max-width: 767px)");
+      const widthClientInitial = document.documentElement.clientWidth;
+      if (widthClientInitial <= 767) {
+        burgerButton.addEventListener("click", hideShow);
+      }
+      ipad.addListener(validation);
       function validation(event) {
-      console.log(ipad.matches);
         if (event.matches) {
-          burgerButton.addEventListener('click', hideShow)
+          burgerButton.addEventListener("click", hideShow);
         } else {
-          burgerButton.removeEventListener('click', hideShow)
+          burgerButton.removeEventListener("click", hideShow);
         }
       }
       function hideShow() {
-        if (menu.classList.contains('is-active')) {
-          menu.classList.remove('is-active')
+        if (menu.classList.contains("is-active")) {
+          menu.classList.remove("is-active");
         } else {
-          menu.classList.add('is-active')
+          menu.classList.add("is-active");
         }
       }
     </script>
